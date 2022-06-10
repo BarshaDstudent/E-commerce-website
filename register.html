@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register form</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- falcone link -->
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<!-- font awesome link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<style type="text/css">
+	body{
+			 /*background: url(images/i.jfif)no-repeat center fixed; */
+			/* using background image(image/coffee.webp)*/
+			background-color: pink;
+			background-size: cover;
+		}
+	h2{
+		color: black;
+		font-size: 40px;
+	    margin-left: 350px;
+		margin-top: 50px;
+		/*margin-left: 100px;*/
+
+	}
+	
+	
+	/*for the customer registration*/
+	.main-form{
+		 /*display: grid;
+	  grid-template-columns: repeat(4, 1fr);
+	  color: var(--white);
+	  margin-left: 60px;*/
+		
+	}
+	.form-field {
+		  background: #fff;
+		  margin-top: 10px;
+		  margin-bottom: 40px;
+		  padding: 4rem;
+		  border: 1px solid #eee;
+		  border-radius: 4px;
+		  margin-right: 0px;
+		  margin-left: 300px;
+		  width: 600px;
+
+		 /* text-align: center;*/
+		 
+		   
+		}
+	.form-field input{
+		margin-top:10px;
+		margin-left: 10px;
+		margin-right: 100px;
+		width: 30px;
+		padding: 50px 45px;
+
+		 
+
+	}
+	.name input{
+		background: #f8f9fa;
+		  border: 2px solid rgba(216, 216, 216, 0.3);
+		  color: #777;
+		  font-size: 16px;
+		  padding: 20px 15px;
+		  width: 100%;
+		  border-radius: 4px;
+		  height: 5px;
+		  /*text-align: center;*/
+		  
+	}
+	.radiobtn {
+		font-size: 20px;
+		width: 0px;
+		text-align: center;
+		margin-left: 0px;
+		/*margin-right: 50px;*/
+		letter-spacing: 0px;
+		/* padding: 5px 10px;*/
+		 
+
+
+	}
+	button.send {
+		  border: none;
+		  font-size: 16px;
+		  padding: 15px 30px;
+		  margin: 20px auto 0;
+		  color: #fff;
+		  background: #ff4c4c;
+		  border-color: #ff4c4c;
+		  display: inline-block;
+		  font-weight: 400;
+		  text-align: center;
+		  vertical-align: middle;
+		  cursor: pointer;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		  border: 1px solid transparent;
+		  border-radius: 0.25rem;
+		 
+		}
+
+
+	@media only screen and (max-width: 998px) {
+	  .main-form {
+	    grid-template-columns: repeat(2, 1fr);
+	    row-gap: 3rem;
+	  }
+	}
+
+	@media only screen and (max-width: 768px) {
+	  .main-form {
+	    grid-template-columns: 1fr;
+	    row-gap: 2rem;
+	  }
+	}
+	
+		
+	
+
+	
+	
+</style>
+<body>
+<!-- 	<header> -->
+		<!-- navigation bar -->
+		<nav class="nav">
+	        <div class="navigation container">
+
+		        <div class="logo">
+		          <h1>Queen</h1>
+		        </div>
+
+		        <div class="menu">
+		          <div class="top-nav">
+
+		            <div class="logo">
+		              <h1>Queen</h1>
+		            </div>
+
+		            <div class="close">
+		              <i class="bx bx-x"></i>
+		            </div>
+
+		          </div>
+
+		          <ul class="nav-list">
+
+		            <li class="nav-item">
+		              <a href="Guest.html" class="nav-link">Guest Checkout</a>
+		            </li>
+
+		            <li class="nav-item">
+		              <a href="#register" class="nav-link">Register</a>
+		            </li>
+
+		            <li class="nav-item">
+		              <a href="login.html" class="nav-link">Login</a>
+		            </li>
+
+		            <li class="nav-item">
+		              <a href="cart.html" class="nav-link icon"><i class="bx bx-shopping-bag"></i></a>
+		            </li>
+
+		          </ul>
+
+		        </div>
+
+		        <a href="cart.html" class="cart-icon">
+		          <i class="bx bx-shopping-bag"></i>
+		        </a>
+
+		        <div class="hamburger">
+		          <i class="bx bx-menu"></i>
+		        </div>
+
+	        </div>
+	    </nav>
+		<h2>Customer Registration Form</h2>
+
+	<!-- this is for registration form -->
+	<div class="form-field">
+		<form  action="/register" method="POST" name="message" onsubmit="login()">
+		<div class="main form">
+			<div class="name">
+				<p><input type="text"placeholder="FirstName*" name="Firstname" id="Firstname" class="box"></p>
+
+			</div>
+			<div class="name">
+				<p><input type="text" placeholder="LastName*" name="Lastname" id="Lastname" class="box"></p>
+
+			</div>
+			<div class="name">
+				<P><input type="email" placeholder="Gmail*" name="Gmail"  id="Gmail" class="box"></P>
+			</div>
+			<div class="name">
+				<P> <input type="text" placeholder="Number*"  minlength="10" maxlength="10" name="Number" id="Number" class="box"></P>
+			</div>
+			<div class="name">
+				<P> <input type="text" placeholder="Age*" name="Age" id="Age" class="box"></P>
+			</div>
+			<label class="radiobtn">
+				<p>Gender:<input type="radio" name="gender" value="male" checked>Male
+				<input type="radio" name="gender" value="Female" checked>Female
+				</p>
+			</label>
+			
+			<div class="name">
+				<P> <input type="text" placeholder="Password*"  name="Password" id="Password" class="box"></P>
+			</div>
+			<div class="name">
+				<P><input type="text" placeholder="ConformPassword*"  name="confirmPassword" id="ConfirmPassword" class="box"></P>
+			</div>
+			
+
+		</div>
+
+	    <!-- <p><input type="submit" class="send" value="Register"></p> -->
+	    <button type="submit" class="send" value="Register">Register</button>
+	</form>
+
+	</div>
+	
+	<!-- footer -->
+	<div class="foot">
+		<div class="footer-container">
+			<div class="footer-cont">
+                    <h3>EXTRAS</h3>
+                    <a href="#">Brands</a>
+                    <a href="#">Gift Certificates</a>
+                    <a href="#">Affiliate</a>
+                    <a href="#">Specials</a>
+                    <a href="#">Site Map</a>
+        </div>
+        <div class="footer-cont">
+                    <h3>INFORMATION</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Site Map</a>
+                </div>
+                <div class="footer-cont">
+                    <h3>MY ACCOUNT</h3>
+                    <a href="#">My Account</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Wish List</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Returns</a>
+                </div>
+                <div class="footer-cont">
+                    <h3>CONTACT US</h3>
+                    <div>
+                        <span>
+                            <i class="fa fa-2x fa-map-marker" aria-hidden="true"></i>
+                        </span>
+                        42 Dream House, New Baneshwor,Kathmandu 
+                    </div>
+                    <div>
+                        <span>
+                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </span>
+                        dasbarsha921@gmail.com
+                    </div>
+                    <div>
+                        <span>
+                           <i class="fa fa-2x fa-phone" aria-hidden="true"></i>
+                        </span>
+                        9813424341
+                    </div>
+                    <div>
+                        <span>
+                            <i class="fa fa-2x fa-paper-plane"></i>
+                        </span>
+                        Dream City, Kathmandu
+                    </div>
+                </div>
+		</div>
+		<h5>copyright @Ecommerce|Powered By:Barsha</h5>
+		
+	</div>
+
+	<script type="text/javascript">
+		function login(){
+			var Fuser=document.forms ["message"]["Firstname"].value;
+			var pass=document.forms ["message"]["password"].value;
+			var Luser=document.forms ["message"]["Lastname"].value;
+			var gml=document.forms ["message"]["Gmail"].value;
+			var num=document.forms ["message"]["Number"].value;
+			var age=document.forms["messageForm"]["Age"].value;
+			var gender=document.forms["messageForm"]["Gender"].value;
+			var confrm=document.forms ["message"]["Confirm password"].value;	
+		}	
+	</script>
+	 <!-- GSAP LINK -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<!-- Custom Script -->
+	<script type="text/javascript">
+		const menu = document.querySelector(".menu");
+		const navOpen = document.querySelector(".hamburger");
+		const navClose = document.querySelector(".close");
+
+		const navLeft = menu.getBoundingClientRect().left;
+		navOpen.addEventListener("click", () => {
+		  if (navLeft < 0) {
+		    menu.classList.add("show");
+		    document.body.classList.add("show");
+		    navBar.classList.add("show");
+		  }
+		});
+
+		navClose.addEventListener("click", () => {
+		  if (navLeft < 0) {
+		    menu.classList.remove("show");
+		    document.body.classList.remove("show");
+		    navBar.classList.remove("show");
+		  }
+		});
+
+		// Fixed Nav
+		const navBar = document.querySelector(".nav");
+		const navHeight = navBar.getBoundingClientRect().height;
+		window.addEventListener("scroll", () => {
+		  const scrollHeight = window.pageYOffset;
+		  if (scrollHeight > navHeight) {
+		    navBar.classList.add("fix-nav");
+		  } else {
+		    navBar.classList.remove("fix-nav");
+		  }
+		});
+
+		// Scroll To
+		const links = [...document.querySelectorAll(".scroll-link")];
+		links.map(link => {
+		  if (!link) return;
+		  link.addEventListener("click", e => {
+		    e.preventDefault();
+
+		    const id = e.target.getAttribute("href").slice(1);
+
+		    const element = document.getElementById(id);
+		    const fixNav = navBar.classList.contains("fix-nav");
+		    let position = element.offsetTop - navHeight;
+
+		    window.scrollTo({
+		      top: position,
+		      left: 0,
+		    });
+
+		    navBar.classList.remove("show");
+		    menu.classList.remove("show");
+		    document.body.classList.remove("show");
+		  });
+		});
+
+		gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
+		gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1, x: 20 });
+		gsap.from(".hero-img", { opacity: 0, duration: 1, delay: 1.5, x: -200 });
+		gsap.from(".hero-content h2", { opacity: 0, duration: 1, delay: 2, y: -50 });
+		gsap.from(".hero-content h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
+		gsap.from(".hero-content a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
+
+	</script>
+    
+
+</body>
+</html>
